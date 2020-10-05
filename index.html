@@ -4,19 +4,25 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
 
     <title>jQuery</title>
   </head>
   <body>
-  	<div class="container">
-  		<button class="btn btn-danger">danger</button>
-  		<button class="btn btn-info">info</button>
-  		<button class="btn btn-primary">primary</button>
-  		<button class="btn btn-warning">warning</button>
-  		<button class="btn btn-success">success</button>
-  		<br><br>
-  		<h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+  	<div class="setting">
+  		<img src="images/2099058.svg">
+  		<ul>
+  			<li class="bg-danger"></li>
+  			<li class="bg-info"></li>
+  			<li class="bg-success"></li>
+  			<li class="bg-warning"></li>
+  			<li class="bg-primary"></li>
+  			<li class="bg-light"></li>
+  		</ul>
+  	</div>
+  	<div class="container py-5">
+  		
+  		<h4 class="p-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
   		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
   		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
   		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
@@ -31,25 +37,37 @@
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script type="text/javascript">
     	$(function(){
-    		$(".btn-danger").click(function(){
+
+    		$(".setting img").click(function(){
+    			$(".setting").toggleClass("move")
+    		})
+
+
+
+
+    		$(".bg-danger").click(function(){
     			$("h4").addClass("bg-danger text-white")
-    			$("h4").removeClass("bg-info bg-success bg-warning bg-primary")
+    			$("h4").removeClass("bg-info bg-success bg-warning bg-primary bg-light")
     		});
-    		$(".btn-info").click(function(){
+    		$(".bg-info").click(function(){
     			$("h4").addClass("bg-info text-white")
-    			$("h4").removeClass("bg-danger bg-success bg-warning bg-primary")
+    			$("h4").removeClass("bg-danger bg-success bg-warning bg-primary bg-light")
     		});
-    		$(".btn-primary").click(function(){
+    		$(".bg-primary").click(function(){
     			$("h4").addClass("bg-primary text-white")
-    			$("h4").removeClass("bg-danger bg-success bg-warning bg-info")
+    			$("h4").removeClass("bg-danger bg-success bg-warning bg-info bg-light")
     		});
-    		$(".btn-warning").click(function(){
+    		$(".bg-warning").click(function(){
     			$("h4").addClass("bg-warning text-white")
-    			$("h4").removeClass("bg-danger bg-info bg-success bg-primary")
+    			$("h4").removeClass("bg-danger bg-info bg-success bg-primary bg-light")
     		});
-    		$(".btn-success").click(function(){
+    		$(".bg-success").click(function(){
     			$("h4").addClass("bg-success text-white")
-    			$("h4").removeClass("bg-danger bg-warning bg-info bg-primary")
+    			$("h4").removeClass("bg-danger bg-warning bg-info bg-primary bg-light")
+    		});
+    		$(".bg-light").click(function(){
+    			$("h4").addClass("bg-success text-dark")
+    			$("h4").removeClass("bg-danger bg-warning bg-info bg-primary bg-success text-white")
     		});
     	})
     </script>
