@@ -1,0 +1,48 @@
+
+
+.setting {
+    position: fixed;
+    top: 50%;
+    width: 200px;
+    margin-left: -190px;
+    transition: 1s;
+    background: cadetblue;
+}
+.setting img{
+    width: 30px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: -20px;
+    cursor: pointer;
+    transform: rotate(0);
+    animation: ghorny 4s linear infinite reverse;
+}
+@keyframes ghorny{
+    from{
+        transform: rotate(0);
+    }
+    to{
+        transform: rotate(180deg);
+    }
+}
+.setting ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0;
+}
+.setting ul li {
+    width: 50px;
+    height: 50px;
+    list-style: none;
+    margin: 5px;
+}
+.setting.move{
+    margin-left: 0;
+}
+
+
+
+
+
