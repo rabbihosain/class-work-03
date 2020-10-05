@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <title>jQuery</title>
+  </head>
+  <body>
+  	<div class="container">
+  		<button class="btn btn-danger">danger</button>
+  		<button class="btn btn-info">info</button>
+  		<button class="btn btn-primary">primary</button>
+  		<button class="btn btn-warning">warning</button>
+  		<button class="btn btn-success">success</button>
+  		<br><br>
+  		<h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+  		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+  		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+  		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+  		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+  		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h4>
+  	</div>
+
+
+
+
+   
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript">
+    	$(function(){
+    		$(".btn-danger").click(function(){
+    			$("h4").addClass("bg-danger text-white")
+    			$("h4").removeClass("bg-info bg-success bg-warning bg-primary")
+    		});
+    		$(".btn-info").click(function(){
+    			$("h4").addClass("bg-info text-white")
+    			$("h4").removeClass("bg-danger bg-success bg-warning bg-primary")
+    		});
+    		$(".btn-primary").click(function(){
+    			$("h4").addClass("bg-primary text-white")
+    			$("h4").removeClass("bg-danger bg-success bg-warning bg-info")
+    		});
+    		$(".btn-warning").click(function(){
+    			$("h4").addClass("bg-warning text-white")
+    			$("h4").removeClass("bg-danger bg-info bg-success bg-primary")
+    		});
+    		$(".btn-success").click(function(){
+    			$("h4").addClass("bg-success text-white")
+    			$("h4").removeClass("bg-danger bg-warning bg-info bg-primary")
+    		});
+    	})
+    </script>
+  </body>
+</html>
